@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User List Table Async</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper-header">
+        <div class="nav">
+          <p>User List</p>
+          <div class="control-panel">
+            <button class="btn-new">+ NEW</button>
+            <div class="light-buttons">
+              <a href="">
+                <button class="btn-light">
+                  <img src="./img/light_mode.svg" alt="" />
+                  <p>Light</p>
+                </button>
+              </a>
+              <button class="btn-dark">
+                <p>Dark</p>
+                <img src="./img/dark_mode.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="search-filter">
+          <div class="wrapper-filter">
+            <fieldset>
+              <legend>Status</legend>
+              <select name="" id="">
+                <option value="">All Status</option>
+                <option value="">INACTIVE</option>
+                <option value="">ACTIVE</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend>City</legend>
+              <select name="" id="">
+                <option value="">All cites</option>
+                <option value="">Dushanbe</option>
+                <option value="">Kulob</option>
+                <option value="">Bokhtar</option>
+                <option value="">Khujand</option>
+                <option value="">Hisor</option>
+              </select>
+            </fieldset>
+          </div>
+          <fieldset class="search-container-dark">
+            <legend class="search-dark">Search</legend>
+            <input
+              type="text"
+              placeholder="Name, email, etc..."
+              class="search"
+            />
+            <img src="./img/search-icon.svg" alt="" />
+          </fieldset>
+        </div>
+      </div>
+      <!-- Table List  -->
+      <table>
+        <!-- THEADE -->
+        <thead>
+          <tr class="table-header">
+            <td class="table-width">
+              <div class="header-flex">
+                <img src="./img/user-icon.svg" alt="" />
+                <p>Name</p>
+              </div>
+            </td>
+            <td>
+              <div class="header-flex">
+                <img src="./img/Lock.svg" alt="" />
+                <p>Город</p>
+              </div>
+            </td>
+            <td>
+              <div class="header-flex">
+                <img src="./img/Timer.svg" alt="" />
+                <p>Status</p>
+                <img src="./img/arrow-alt-up.svg" alt="" />
+              </div>
+            </td>
+            <td>
+              <div class="header-flex">
+                <img src="./img/tag.svg" alt="" />
+                <p>Phone</p>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+        </thead>
+        <!-- TBODY -->
+        <tbody>
+          <!-- <tr class="table-body">
+            <td class="td-person">
+              <div class="body-flex">
+                <div class="wrapper-img">
+                  <img src="" alt="" />
+                </div>
+                <div class="wrapper-text">
+                  <p>Jacob Jones</p>
+                  <p>jackson.graham@example.com</p>
+                </div>
+              </div>
+            </td>
+            <td class="td-city">
+              <p>Dushanbe</p>
+            </td>
+            <td class="td-status">
+              <div>INACTIVE</div>
+            </td>
+            <td class="td-phone">
+              <p>8888 0090</p>
+            </td>
+            <td class="td-control-panel">
+              <div class="lines-td-control-panel">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </td>
+           Modal Control Panel 
+            <div class="modal-control-panel">
+              <div class="control-info">
+                <img src="img/InfoFilled.svg" alt="" />
+                <p>View profile</p>
+              </div>
+              <div class="control-edit">
+                <img src="img/EditFilled.svg" alt="" />
+                <p>Edit</p>
+              </div>
+              <div class="control-delete">
+                <img src="img/DeleteFilled.svg" alt="" />
+                <p>Delete</p>
+              </div>
+            </div>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-add-container">
+      <div class="modal-add">
+        <div class="modal-container">
+          <div class="header-add">
+            <p>Add new</p>
+            <span class="close-add">&times;</span>
+          </div>
+          <form class="form-add">
+            <div class="form-container">
+              <fieldset>
+                <legend>Image</legend>
+                <input type="text" name="image" placeholder="Images" required />
+              </fieldset>
+              <fieldset>
+                <legend>Name</legend>
+                <input type="text" name="name" placeholder="Name" required />
+              </fieldset>
+              <fieldset>
+                <legend>E-mail</legend>
+                <input type="text" name="email" placeholder="E-mail" required />
+              </fieldset>
+              <fieldset>
+                <legend>State</legend>
+                <select name="status" required>
+                  <option>Choose state</option>
+                  <option>INACTIVE</option>
+                  <option>ACTIVE</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>City</legend>
+                <select name="city" required>
+                  <option>All cities</option>
+                  <option>Dushanbe</option>
+                  <option>Kulob</option>
+                  <option>Bokhtar</option>
+                  <option>Khujand</option>
+                  <option>Hisor</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>Phone</legend>
+                <input type="text" name="phone" placeholder="Phone" required />
+              </fieldset>
+            </div>
+            <div class="footer-add">
+              <input type="submit" value="ADD" />
+              <input type="reset" value="RESET" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal-add-container edit-modal">
+      <div class="modal-add">
+        <div class="modal-container">
+          <div class="header-add">
+            <p>Edit Post</p>
+            <span class="close-add close-edit">&times;</span>
+          </div>
+          <form class="form-add form-edit">
+            <div class="form-container">
+              <fieldset>
+                <legend>Image</legend>
+                <input type="text" name="image" placeholder="Images" />
+              </fieldset>
+              <fieldset>
+                <legend>Name</legend>
+                <input type="text" name="name" placeholder="Name" />
+              </fieldset>
+              <fieldset>
+                <legend>E-mail</legend>
+                <input type="text" name="email" placeholder="E-mail" />
+              </fieldset>
+              <fieldset>
+                <legend>State</legend>
+                <select name="status">
+                  <option>Choose state</option>
+                  <option value="false">INACTIVE</option>
+                  <option value="true">ACTIVE</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>City</legend>
+                <select name="city">
+                  <option>All cities</option>
+                  <option>Dushanbe</option>
+                  <option>Kulob</option>
+                  <option>Bokhtar</option>
+                  <option>Khujand</option>
+                  <option>Hisor</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <legend>Phone</legend>
+                <input type="text" name="phone" placeholder="Phone" />
+              </fieldset>
+            </div>
+            <div class="footer-add">
+              <input type="submit" value="EDIT" />
+              <input type="reset" value="RESET" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
